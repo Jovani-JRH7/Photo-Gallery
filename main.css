@@ -1,0 +1,75 @@
+body {
+    background-color: #000033; /* Dark blue background for the entire site */
+    color: #ffffff; /* White text for better contrast */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-h1 {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: underline;
+    margin: 30px;
+}
+
+.main-h2 {
+    background-color: #add8e6; /* Light blue background */
+    color: #000033; /* Dark blue text */
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.paragraph {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px; /* The space from paragraph to images */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 160%;
+    max-width: 1300px;
+    margin-bottom: 10px;
+}
+
+.column {
+    flex: 1;
+    padding: 20px; /* how far apart the images are */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.column img {
+    width: 100%;
+    height: 460px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+    border-radius: 20px; /* how sharp the corners of images are */
+    transition: transform 0.2s;
+}
+
+.column img:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #add8e6; /* Light blue color for captions */
+}
+
+.images {
+    width: 100%;
+    height: 460px; /* Ensure the height matches the column img height */
+    object-fit: cover;
+}
