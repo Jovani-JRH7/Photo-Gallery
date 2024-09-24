@@ -35,19 +35,8 @@
     <div class="portfolio">
         <div class="row">
             <div class="column">
-                <img class="images" src="Images/UNCW Orientation IMG.jpg" alt="UNCW Orientation" onclick="openModal('modal1')">
+                <img class="images" src="Images/UNCW Orientation IMG.jpg" alt="UNCW Orientation">
                 <p class="caption">August 21, 2023. UNCW 2027 class photo.</p>
-                <!--modal 1-->
-                <dialog id="modal1" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal('modal1')">&times;</span>
-                        <img src="Images/UNCW Orientation IMG.jpg" alt="UNCW Orientation" class="modal-image">
-                        <div class="description">
-                            <h2>UNCW Orientation</h2>
-                            <p>August 21, 2023. UNCW 2027 class photo.</p>
-                        </div>
-                    </div>
-                </dialog>
             </div>
 
             <div class="column">
@@ -107,37 +96,6 @@
             </div>
         </div>
     </div>
-
-
-    <!--java-->
-    <script>
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.showModal();
-            }
-        }
-
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.close();
-            }
-        }
-
-        window.onclick = function(event) {
-            const modals = document.querySelectorAll('dialog[open]');
-            modals.forEach(modal => {
-                const rect = modal.getBoundingClientRect();
-                if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {
-                    modal.close();
-                }
-            });
-        }
-    </script>
-
-    
-
 
 </body>
 
