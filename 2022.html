@@ -35,21 +35,84 @@
     <div class="portfolio">
         <div class="row">
             <div class="column">
-                <img class="images" src="Images/NC STATE IMG.jpg" alt="NC STATE">
+                <img class="images" src="Images/NC STATE IMG.jpg" alt="NC STATE" onclick="openModal('modal3')">
                 <p class="caption">June 17, 2022. Juntos junior year</p>
+                <!--modal 3-->
+                <dialog id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <img src="Images/NC STATE IMG.jpg" alt="NC STATE" class="modal-image">
+                        <div class="description">
+                            <h2>NC STATE</h2>
+                            <p>June 17, 2022. Juntos junior year</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
 
             <div class="column">
-                <img class="images" src="Images/Flowers IMG.jpg" alt="Flowers">
+                <img class="images" src="Images/Flowers IMG.jpg" alt="Flowers" onclick="openModal('modal4')">
                 <p class="caption">August 26, 2022. Backyard flowers.</p>
+                <!--modal 4-->
+                <dialog id="modal4" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal4')">&times;</span>
+                        <img src="Images/Flowers IMG.jpg" alt="Flowers" class="modal-image">
+                        <div class="description">
+                            <h2>Flowers</h2>
+                            <p>August 26, 2022. Backyard flowers.</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
 
             <div class="column">
-                <img class="images" src="Images/8 Ball IMG.jpg" alt="Pool Table">
+                <img class="images" src="Images/8 Ball IMG.jpg" alt="Pool Table" onclick="openModal('modal11')">
                 <p class="caption">December 21, 2022. 8 ball pool table.</p>
+                <!--modal 11-->
+                <dialog id="modal11" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal11')">&times;</span>
+                        <img src="Images/8 Ball IMG.jpg" alt="Pool Table" class="modal-image">
+                        <div class="description">
+                            <h2>Pool Table</h2>
+                            <p>December 21, 2022. 8 ball pool table.</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
-    </div>    
+    </div>   
+    
+    
+    <!--java-->
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.showModal();
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.close();
+            }
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('dialog[open]');
+            modals.forEach(modal => {
+                const rect = modal.getBoundingClientRect();
+                if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {
+                    modal.close();
+                }
+            });
+        }
+    </script>
+
+
 
 </body>
 

@@ -35,46 +35,151 @@
     <div class="portfolio">
         <div class="row">
             <div class="column">
-                <img class="images" src="Images/UNCW Orientation IMG.jpg" alt="UNCW Orientation">
+                <img class="images" src="Images/UNCW Orientation IMG.jpg" alt="UNCW Orientation" onclick="openModal('modal1')">
                 <p class="caption">August 21, 2023. UNCW 2027 class photo.</p>
+                <!--modal 1-->
+                <dialog id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <img src="Images/UNCW Orientation IMG.jpg" alt="UNCW Orientation" class="modal-image">
+                        <div class="description">
+                            <h2>UNCW Orientation</h2>
+                            <p>August 21, 2023. UNCW 2027 class photo.</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
 
             <div class="column">
-                <img class="images" src="Images/Florida Umbrella IMG.jpg" alt="Umbrella img">
+                <img class="images" src="Images/Florida Umbrella IMG.jpg" alt="Umbrella img" onclick="openModal('modal5')">
                 <p class="caption">June 21, 2023. Cecilia and I at a restaurant in Florida</p>
+                <!--modal 5-->
+                <dialog id="modal5" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal5')">&times;</span>
+                        <img src="Images/Florida Umbrella IMG.jpg" alt="Umbrella img" class="modal-image">
+                        <div class="description">
+                            <h2>Florida Umbrella</h2>
+                            <p>June 21, 2023. Cecilia and I at a restaurant in Florida</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
 
             <div class="column">
-                <img class="images" src="Images/Duke Garden IMG.jpg" alt="Duke Garden">
+                <img class="images" src="Images/Duke Garden IMG.jpg" alt="Duke Garden" onclick="openModal('modal6')">
                 <p class="caption">April 15, 2023. Duke Garden with Cecilia and I.</p>
+                <!--modal 6-->
+                <dialog id="modal6" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal6')">&times;</span>
+                        <img src="Images/Duke Garden IMG.jpg" alt="Duke Garden" class="modal-image">
+                        <div class="description">
+                            <h2>Duke Garden</h2>
+                            <p>April 15, 2023. Duke Garden with Cecilia and I.</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
 
         <div class="row">
             <div class="column">
-                <img class="images" src="Images/Donald Duck IMG.jpg" alt="Donald Duck">
+                <img class="images" src="Images/Donald Duck IMG.jpg" alt="Donald Duck" onclick="openModal('modal7')">
                 <p class="caption">June 22, 2023. Disney park gift shop.</p>
+                <!--modal 7-->
+                <dialog id="modal7" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal7')">&times;</span>
+                        <img src="Images/Donald Duck IMG.jpg" alt="Donald Duck" class="modal-image">
+                        <div class="description">
+                            <h2>Donald Duck</h2>
+                            <p>June 22, 2023. Disney park gift shop.</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
 
             <div class="column">
-                <img class="images" src="Images/Disney Castle IMG.jpg" alt="Disney Castle">
+                <img class="images" src="Images/Disney Castle IMG.jpg" alt="Disney Castle" onclick="openModal('modal8')">
                 <p class="caption">June 22, 2023. Disney Castle fireworks show.</p>
+                <!--modal 8-->
+                <dialog id="modal8" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal8')">&times;</span>
+                        <img src="Images/Disney Castle IMG.jpg" alt="Disney Castle" class="modal-image">
+                        <div class="description">
+                            <h2>Disney Castle</h2>
+                            <p>June 22, 2023. Disney Castle fireworks show.</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
 
             <div class="column">
-                <img class="images" src="Images/Corsage IMG.png" alt="Prom Corsage">
+                <img class="images" src="Images/Corsage IMG.png" alt="Prom Corsage" onclick="openModal('modal9')">
                 <p class="caption">May 27, 2023. Senior prom with Cecilia and I.</p>
+                <!--modal 9-->
+                <dialog id="modal9" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal9')">&times;</span>
+                        <img src="Images/Corsage IMG.png" alt="Prom Corsage" class="modal-image">
+                        <div class="description">
+                            <h2>Prom Corsage</h2>
+                            <p>May 27, 2023. Senior prom with Cecilia and I.</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
 
         <div class="row">
             <div class="column">
-                <img class="images" src="Images/Carowinds IMG.jpg" alt="Carowinds">
+                <img class="images" src="Images/Carowinds IMG.jpg" alt="Carowinds" onclick="openModal('modal10')">
                 <p class="caption">April 13, 2023. Carowinds (Mi CASA College Tour).</p>
+                <!--modal 10-->
+                <dialog id="modal10" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal10')">&times;</span>
+                        <img src="Images/Carowinds IMG.jpg" alt="Carowinds" class="modal-image">
+                        <div class="description">
+                            <h2>Carowinds</h2>
+                            <p>April 13, 2023. Carowinds (Mi CASA College Tour).</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
     </div>
 
+
+    <!--java-->
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.showModal();
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.close();
+            }
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('dialog[open]');
+            modals.forEach(modal => {
+                const rect = modal.getBoundingClientRect();
+                if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {
+                    modal.close();
+                }
+            });
+        }
+    </script>
+    
 </body>
 
 </html>
