@@ -112,6 +112,12 @@ body {
 }
 
 
+/* Adjust the modal image size to match the scaled size */
+.modal img {
+    transform: scale(1.05); /* Scale the image inside the modal */
+}
+
+
 .caption {
     margin-top: 10px;
     font-size: 25px;
