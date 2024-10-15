@@ -35,12 +35,52 @@
     <div class="portfolio">
         <div class="row">
             <div class="column">
-                <img class="images" src="Images/Universal Studios IMG.jpg" alt="Universal Studios">
+                <img class="images" src="Images/Universal Studios IMG.jpg" alt="Universal Studios" onclick="openModal('modal2')">
                 <p class="caption">December 22, 2021. First time going to Universal Studios.</p>
+                <!--modal 2-->
+                <dialog id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <img src="Images/Universal Studios IMG.jpg" alt="Universal Studios" class="modal-image">
+                        <div class="description">
+                            <h2>Universal Studios</h2>
+                            <p>December 22, 2021. First time going to Universal Studios.</p>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
     </div>
 
+
+    <!--java-->
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.showModal();
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.close();
+            }
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('dialog[open]');
+            modals.forEach(modal => {
+                const rect = modal.getBoundingClientRect();
+                if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {
+                    modal.close();
+                }
+            });
+        }
+    </script>
+
+    
 </body>
 
 </html>
