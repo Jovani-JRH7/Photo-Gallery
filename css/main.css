@@ -86,35 +86,41 @@ body {
 
 .row {
     display: flex;
-    justify-content: space-between;
-    width: 160%;
-    max-width: 100%;
+    justify-content: center; /* Center-align columns */
+    width: 100%; /* Full width */
     margin-bottom: 10px;
 }
 
 .column {
     flex: 1;
-    padding: 20px; /* how far apart the images are */
-    box-sizing: border-box;
-    text-align: center;
+    max-width: 33%; /* Keeps the column width consistent */
+    padding: 20px; /* Consistent spacing around images */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    text-align: center; /* Centers the content inside the column */
 }
 
 .column img {
-    width: 95%;
-    height: 500px; /* Set a fixed height */
-    object-fit: cover; /* Ensures the image covers the area without distorting */
-    border-radius: 20px; /* how sharp the corners of images are */
-    transition: transform 0.2s;
+    width: 100%;  /* Full width within the column */
+    height: 500px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images cover the frame without distortion */
+    border-radius: 20px; /* Rounded corners for aesthetics */
 }
 
 .column img:hover {
-    transform: scale(1.05);
+    transition: 80ms;
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 
 /* Adjust the modal image size to match the scaled size */
-.modal img {
-    transform: scale(1.05); /* Scale the image inside the modal */
+.modal-image {
+    width: 100%; /* Maintain the natural image width up to the container size */
+    max-width: 800px; /* Maximum width for modal images */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    border-radius: 10px; /* Slightly rounded corners for the modal images */
+    object-fit: contain;
+    transition: none;  /* Disables CSS transitions */
+    transform: scale(1.05);   /* Disables transformations */
 }
 
 
@@ -143,11 +149,6 @@ body {
     max-width: 900px;
     padding: 0;
     background-color: rgb(255, 255, 255);
-}
-
-.modal-img {
-    transition: none; /* Disable the transition effect */
-    transform: none; /* Ensure no transformation is applied */
 }
 
 .modal-content {
